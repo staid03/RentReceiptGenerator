@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;Version	Date		Author		Notes
 ;	0.1		03-MAR-2017	Staid03		Initial
 
-iniFile = .rentaldetails.ini		;file should be with the AHK script
+iniFile = rentaldetails.ini		;file should be with the AHK script
 receiptOutputFolder = D:
 
 main:
