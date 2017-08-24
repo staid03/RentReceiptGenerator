@@ -10,7 +10,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;	0.1		03-MAR-2017	Staid03		Initial
 
 iniFile = rentaldetails.ini		;file should be with the AHK script
-receiptOutputFolder = D:
+receiptOutputFolder = %a_scriptdir%
 
 main:
 {
@@ -82,7 +82,7 @@ createText:
 	}
 	else
 	{
-		ReceiptNumberSpaces = %ReceiptNumber%%a_space%|
+		ReceiptNumberSpaces = %ReceiptNumber%%a_space%%a_space%|
 	}
 	line = | Number:%a_tab%%a_tab%%a_tab%%a_tab%%a_tab%     %ReceiptNumberSpaces%
 	gosub , addLine
@@ -109,6 +109,14 @@ createText:
 	line = | Thank you%a_tab%%a_tab%%a_tab%%a_tab%%a_tab%%a_tab%|	
 	gosub , addLine
 	line = %borderline%
+	gosub , addLine
+	line = `n`n**Receipt formatted for Notepad with the below settings**
+	gosub , addLine
+	line = `Font: Consolas
+	gosub , addLine
+	line = Font Style: Regular
+	gosub , addLine
+	line = Size: 11
 	gosub , addLine
 }
 Return
