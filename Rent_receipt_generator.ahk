@@ -8,6 +8,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;Version	Date		Author		Notes
 ;	0.1		03-MAR-2017	Staid03		Initial
+;	0.2		24-AUG-2017	Staid03		Updated output folder, minor formatting, note for user for best viewing  …
+;									1) Changed output directory from D: to the script directory
+;									2) Added a space into a row that was showing as space deficient
+;									3) Added a note that goes onto the output receipt describing the best
+;										way to view the file (found that other programs and settings broke the
+;										formatting)
 
 iniFile = rentaldetails.ini		;file should be with the AHK script
 receiptOutputFolder = %a_scriptdir%
